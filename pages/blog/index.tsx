@@ -1,66 +1,57 @@
 import * as React from 'react';
+import { gql } from 'apollo-boost';
+import Head from 'next/head';
+import Link from 'next/link';
+import { withRouter } from 'next/router';
 
-import marked from 'marked';
+import WithError from 'src/components/WithError';
 
-import ApolloClient, { gql } from 'apollo-boost';
+import { client } from 'src/utils/apollo-client';
+import { processBlogPost, ProcessedPost, PostFromAPI } from 'src/utils/process-blog-post';
 
-import fetch from 'node-fetch';
+import CSS from './index.module.scss';
 
-type Post = {
-  title: string;
-  publish_date: { year: string; month: string; day: string };
-  body: string;
-};
-
-const client = new ApolloClient({
-  fetch: fetch as any,
-  uri: 'http://0.0.0.0:1337/graphql'
-});
-
-export default class Home extends React.Component<{ posts: Post[] }> {
+export class Blog extends React.Component<{ posts: ProcessedPost[] }> {
   static async getInitialProps() {
-    const { data } = await client.query<{ posts: (Post & { publish_date: string })[] }>({
+    const { data } = await client.query<{ posts: PostFromAPI[] }>({
       query: gql`
         {
           posts(limit: 2, sort: "publish_date:desc", where: { published: true }) {
             title
             body
-            summary
+            slug
             publish_date
           }
         }
       `
     });
-    const posts = data.posts.map(post => {
-      const [year, month, day] = post.publish_date.split('-');
-      console.log(year);
-      return {
-        ...post,
-        body: marked(post.body, { baseUrl: 'http://0.0.0.0:1337' }),
-        publish_date: {
-          year,
-          month,
-          day
-        }
-      };
-    });
+    const posts = data.posts.map(processBlogPost);
     return { posts };
   }
 
   render() {
     const { posts } = this.props;
-    console.log(posts);
     return (
       <>
-        <h1>Hello to the blog</h1>
-        <ul>
-          {posts.map(({ body, publish_date, title }) => (
-            <li>
-              <h2>{title}</h2>
-              <em>
-                {publish_date.day}.{publish_date.month}.{publish_date.year}
-              </em>
-              <div dangerouslySetInnerHTML={{ __html: body }} />
+        <Head>
+          <title>pixelkritzel.de</title>
+        </Head>
+        <ul className={CSS.list}>
+          {posts.map(({ body, publishDate, slug, title }) => (
+            <li key={slug}>
+              <article className="article post-list-item">
+                <div className="time-container">
+                  <time>
+                    {publishDate.day}.{publishDate.month}.{publishDate.year}
+                  </time>
+                </div>
+                <h2>
+                  <Link href="/blog/[slug]" as={`/blog/${slug}`}>
+                    <a>{title}</a>
+                  </Link>
+                </h2>
+                <div dangerouslySetInnerHTML={{ __html: body }} />
+              </article>
             </li>
           ))}
         </ul>
@@ -68,3 +59,5 @@ export default class Home extends React.Component<{ posts: Post[] }> {
     );
   }
 }
+
+export default withRouter(WithError(Blog));
