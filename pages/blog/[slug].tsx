@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { NextPageContext } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
 import { withRouter } from 'next/router';
 import { WithRouterProps } from 'next/dist/client/with-router';
 import { gql } from 'apollo-boost';
@@ -10,6 +9,8 @@ import WithError from 'src/components/WithError';
 
 import { client } from 'src/utils/apollo-client';
 import { processBlogPost, ProcessedPost, PostFromAPI } from 'src/utils/process-blog-post';
+import { Article } from 'src/components/Article';
+import { BlogLayout } from 'src/components/BlogLayout';
 
 class Post extends React.Component<WithRouterProps & ProcessedPost & { statusCode?: number }> {
   static async getInitialProps(context: NextPageContext) {
@@ -35,29 +36,16 @@ class Post extends React.Component<WithRouterProps & ProcessedPost & { statusCod
   }
 
   render() {
-    const { title, publishDate, body, slug, summary } = this.props as ProcessedPost;
+    const post = this.props;
 
     return (
-      <>
+      <BlogLayout>
         <Head>
-          <title>{title} - pixelkritzel.de</title>
-          <meta name="description" content={summary}></meta>
+          <title>{post.title} - pixelkritzel.de</title>
+          <meta name="description" content={post.summary}></meta>
         </Head>
-
-        <article className="article post-list-item">
-          <div className="time-container">
-            <time>
-              {publishDate.day}.{publishDate.month}.{publishDate.year}
-            </time>
-          </div>
-          <h2>
-            <Link href="/blog/[slug]" as={`/blog/${slug}`}>
-              <a>{title}</a>
-            </Link>
-          </h2>
-          <div dangerouslySetInnerHTML={{ __html: body }} />
-        </article>
-      </>
+        <Article {...post} />
+      </BlogLayout>
     );
   }
 }

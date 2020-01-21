@@ -1,11 +1,9 @@
 @import 'normalize.scss';
-@import 'milligram/milligram';
 @import 'variables';
+@import 'milligram/milligram';
 
 @import 'media-queries';
 @import 'navigation';
-@import 'post-list-item';
-@import 'article';
 @import 'prism';
 
 .container {

@@ -1,0 +1,62 @@
+@import "variables";
+@import "milligram/Utility";
+
+.article {
+  img {
+    padding: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  }
+
+  .time-container {
+    @extend .clearfix;
+
+    time {
+      float: right;
+      padding: 0 8px 2px;
+      margin-bottom: 8px;
+      margin-left: 2em;
+      color: lighten($color-secondary, 16%);
+      border-bottom: 2px dashed lighten($color-secondary, 36%);
+    }
+  }
+
+  pre[class*='language-']:before,
+  pre[class*='language-']:after {
+    display: none;
+  }
+}
+
+.postListItem {
+  position: relative;
+
+  h1 a {
+    display: block;
+    color: inherit;
+    transition: color 0.6s ease-in-out;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 27.5%;
+    width: 45%;
+    height: 1px;
+    background-color: lighten($color-primary, 30%);
+  }
+
+  &:last-of-type {
+    &:after {
+      display: none;
+    }
+  }
+}
