@@ -1,6 +1,7 @@
 import * as React from 'react';
 import cx from 'classnames';
 import Prism from 'prismjs';
+import format from 'date-fns/format';
 
 import Link from 'next/link';
 
@@ -20,20 +21,18 @@ export class Article extends React.Component<ArticleProps> {
   }
 
   render() {
-    const { body, isInPostList, publishDate, slug, title } = this.props;
+    const { body, isInPostList, publish_date, slug, title } = this.props;
 
     return (
       <article
         ref={ref => (this.articleElement = ref)}
         className={cx(CSS.article, { [CSS.postListItem]: isInPostList })}
       >
-        <div className="time-container">
-          <time>
-            {publishDate.day}.{publishDate.month}.{publishDate.year}
-          </time>
+        <div className={CSS.timeContainer}>
+          <time>{format(new Date(publish_date), 'dd.MM.yyyy - HH:mm')}</time>
         </div>
         <h2>
-          <Link href="/blog/[slug]" as={`/blog/${slug}`}>
+          <Link href='/blog/[slug]' as={`/blog/${slug}`}>
             <a>{title}</a>
           </Link>
         </h2>
