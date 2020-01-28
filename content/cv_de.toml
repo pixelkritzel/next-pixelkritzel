@@ -1,0 +1,241 @@
+title = "Javascript Developer Timo Zöller"
+introduction = "Hi, Ich bin Timo. Seit sieben Jahren arbeite ich als Frontend-Developer und die letzten fünf davon mit dem Schwerpunkt auf Javascript-Single-Page-Applications und Styleguide-zentrierte-Frontend-Architekturen. Ich habe an großen Customer-Relationship-Management-Systemen mitgebaut und mag die Vorstellung, dass mein Code den Arbeitsalltag anderer Menschen verbessert. Als Arbeitsumfeld schätze ich sich einen Umgang auf Augenhöhe und eine offene sowie verantwortungsvolle Arbeitsatmosphäre. Wenn Sie Interesse an einer Zusammenarbeit haben, dann freue ich mich über eine [Email](mailto:timo@pixelkritzel.de) oder einen Anruf ([+49 171 150 555 7](tel:49-171-1505557))."
+imagePath = "/timo.jpg"
+
+[person]
+title = "Zur Person"
+
+  [[person.fields]]
+  label = "Name"
+  value = "Timo Zöller"
+
+  [[person.fields]]
+  label = "Wohnort"
+  value = "Berlin"
+
+  [[person.fields]]
+  label = "Adresse"
+  value = "Kiehlufer 125<br />12059 Berlin"
+
+  [[person.fields]]
+  label = "Telefon"
+  value = "[+49 171 150 555 7](tel:49-171-1505557)"
+
+  [[person.fields]]
+  label = "Email"
+  value = "timo@pixelkritzel.de"
+
+
+[development]
+title = "Werdegang"
+
+  [[development.list]]
+  start = 2002.0
+  end = 2002.0
+  description = "Abitur am *Gymnasium Loger Straße* in Osterholz-Scharmbeck"
+
+  [[development.list]]
+  start = 2003.0
+  end = 2004.0
+  description = "Studium der Philosophie und Germanistik an *Universität Bremen*"
+
+  [[development.list]]
+  start = 2004.0
+  end = 2010.0
+  description = "Studium der Filmregie und Drehbuch an der selbstorganisierten Filmschule *Filmarche e.V.*"
+
+  [[development.list]]
+  start = 2011.0
+  end = "heute"
+  description = "Arbeit als freiberuflicher Frontend-Entwickler"
+
+[selected_projects]
+title = "Ausgewählte Projekte"
+
+  [[selected_projects.list]]
+  start = 2019.0
+  end = 2019.0
+  name = "Publicis Sapient"
+  link = "https://www.publicissapient.com/"
+  language = "Deutsch"
+  description = "Portierung auf React einer vorhandenen Webanwendung, in der Antragsstrecken für diverse Versicherungsproduktive implementiert sind. Konzeptionierung und Umsetzung einer modularen und komponentenbasierten Architektur. Kooperation beim Entwurf der entsprechenden Rest-APIs. Training des Entwicklungsteams, damit dieses selbstständig die Produkte in React weiterentwickeln kann."
+  used_technologies = [
+    "React",
+    "Typescript",
+    "Mobx",
+    "Mobx-State-Tree",
+    "Webpack,",
+    "Jest",
+    "Storybook",
+    "SASS/SCSS",
+    "CSS Modules"
+  ]
+
+  [[selected_projects.list]]
+  start = 2018.0
+  end = 2018.0
+  name = "Tourlane"
+  link = "https://www.tourlane.de/"
+  language = "Englisch"
+  description = "Feature-Entwicklung und Wartung eines bestehenden Projekts auf Basis von Ruby on Rails und React/Redux. Neuentwicklung eines Projekts mit React/Next.js."
+  used_technologies = [
+    "React",
+    "Redux",
+    "Next.js",
+    "Jest",
+    "SASS",
+    "CSS Modules",
+    "Styleguidist",
+    "Styled Components",
+    "Contentful"
+  ]
+
+  [[selected_projects.list]]
+  start = 2017.0
+  end = 2017.0
+  name = "Unit-B Technology"
+  link = "https://www.usu.com/de/meldungen/usu-software-ag-uebernimmt-unitb-technology-gmbh/"
+  language = "Deutsch"
+  description = "Beratung zur Weiterentwicklung eines Legacy-Frontend-Projekts. Umsetzung einer generischen React.js App, um mobile Assitenz-Systeme zu erzeugen. Konzeption und Entwicklung eines internen Commandline Tools in Node.js"
+  used_technologies = [
+    "HTML",
+    "CSS",
+    "SASS",
+    "Javascript",
+    "jQuery",
+    "React",
+    "Node.js"
+  ]
+
+  [[selected_projects.list]]
+  start = 2015.0
+  end = 2016.0
+  name = "Smava"
+  link = "https://www.smava.de/"
+  language = "Englisch"
+  description = "Mitarbeit in einem agilen Team bei der Neuentwicklung eines internen Tools in Backbone.js und Marionette.js"
+  used_technologies = [
+    "HTML",
+    "CSS",
+    "jQuery",
+    "Backbone.js",
+    "Marionette.js",
+    "Handlebars"
+  ]
+
+  [[selected_projects.list]]
+  start = 2013.0
+  end = 2016.0
+  name = "Novacom"
+  link = "https://www.novacom.eu/"
+  language = "Deutsch"
+  description = "Architektur, Umsetzung und Designweiterentwicklung und Neuentwicklung des Frontends einer bestehenden großen Applikation. Dabei wurde Wert darauf gelegt, dass der Frontend-Code in Form eines Styleguides so dokumentiert wird, dass die vorhandenen Backend-Entwickler kein Javascript oder CSS beherrschen müssen. Die komplette Konfiguration des Frontends musste mit Hilfe von HTML geschehen. Am Besten vergleichen ließe es sich damit, dass ich so etwas wie in firmeninternes Twitter Bootstrap entwickelt habe. Die Browser-Unterstützung reichte bis zum IE8 herunter. Dazu kamen mehrere Backbone-Komponenten, maßgeschneiderte jQuery-Plugins und eine Ember.js Mobile App."
+  used_technologies = [
+    "HTML",
+    "CSS",
+    "Javascript",
+    "jQuery",
+    "Jasmine",
+    "Grunt",
+    "Backbone.js",
+    "Ember.js"
+  ]
+
+  [[selected_projects.list]]
+  start = 2013.0
+  end = 2013.0
+  name = "Toroleo"
+  language = "Englisch"
+  link = "https://www.deutsche-startups.de/2014/08/25/delticom-uebernimmt-nun-auch-den-preisvergleich-toroleo/"
+  description = "Achitektur, Prozessentwicklung und Coding für eine Neuentwicklung des Frontend auf Basis eines *Living Styleguides*"
+  used_technologies = [
+    "HTML",
+    "CSS",
+    "jQuery"
+  ]
+
+[customers]
+title = "Kunden (Auswahl)"
+list = [
+  "[Publicis Sapient](https://www.publicissapient.com/)",
+  "[Tourlane](https://www.tourlane.de/)",
+  "Unit-B Technology (nun Teil von [USU](https://www.usu.de/de/meldungen/usu-software-ag-uebernimmt-unitb-technology-gmbh/))",
+  "[Smava](https://www.smava.de/)",
+  "[Novacom](https://www.novacom.eu/)",
+  "Toroleo (jetzt [Reifen.de](http://www.reifen.de/))",
+  "Headwalk",
+  "[5apps](https://5apps.com/)",
+  "[The Brettinghams](http://www.brettingham.de/)",
+  "Kluuu (jetzt [Voice Republic](https://voicerepublic.com))",
+  "[Media-X-Change](http://media-x-change.de/)"
+]
+
+[coding]
+title = "Coding Kenntnisse"
+
+  [[coding.fields]]
+  label = "HTML"
+  value = "Experte"
+
+  [[coding.fields]]
+  label = "Javascript"
+  value = "Experte"
+
+  [[coding.fields]]
+  label = "Typescript"
+  value = "Fortgeschritten"
+
+  [[coding.fields]]
+  label = "CSS"
+  value = "Experte"
+
+  [[coding.fields]]
+  label = "React"
+  value = "Experte"
+
+  [[coding.fields]]
+  label = "Weitere JavaScript Frameworks"
+  value =  [
+    "React",
+    "Backbone",
+    "jQuery",
+    "Handlebars",
+    "Lo-Dash / Underscore"
+  ]
+
+  [[coding.fields]]
+  label = "Frontend Build Tools"
+  value = [
+    "Grunt",
+    "Gulp",
+    "Webpack"
+  ]
+
+  [[coding.fields]]
+  label = "CSS Techniken"
+  value = [
+    "SASS",
+    "BEM",
+    "Styleguide Driven Development",
+    "Responsive Design",
+    "Progressive Enhancement"
+  ]
+
+[soft_skills]
+title = "Soft Skills"
+list = [
+  "Scrum",
+  "Erfahrung in deutsch- und englischsprachigen Teams",
+  "Refactorings",
+  "Konzeption von Frontend-Architekturen"
+]
+
+[links]
+title = "Links"
+list = [
+  "[Github](https://github.com/pixelkritzel)",
+  "[Twitter](https://twitter.com/pixelkritzel)",
+  "[Xing](https://www.xing.com/profile/Timo_Zoeller2)",
+  "[Blog](https://blog.pixelkritzel.de)",
+  "[Impressum & Datenschutzerklärung](https://blog.pixelkritzel.de/necessary-shit/)"
+]

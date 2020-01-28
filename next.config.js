@@ -14,8 +14,15 @@ module.exports = withStyles({
     ...require('./.env.development.json')
   },
 
-  webpack(config) {
+  webpack(config, { isServer }) {
     config.resolve.modules.push(path.resolve('./'));
+
+    if (!isServer) {
+      config.node = {
+        fs: 'empty',
+        path: 'empty'
+      };
+    }
 
     return config;
   }
