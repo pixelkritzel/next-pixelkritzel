@@ -5,43 +5,36 @@ import 'src/styles/style.scss';
 
 export function BlogLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="container">
+    <div className='container'>
       <header>
-        <h1 className="title">
-          <Link href="/blog">
+        <h1 className='title'>
+          <Link href='/blog'>
             <a>pixelkritzel.de</a>
           </Link>
-          <div className="subtitle">The blog of developer Timo Zöller</div>
+          <div className='subtitle'>The blog of developer Timo Zöller</div>
         </h1>
         <nav>
           <button
-            type="button"
-            title="Show navigation"
-            className="button button-clear show-navigation js-show-navigation"
+            type='button'
+            title='Show navigation'
+            className='button button-clear show-navigation js-show-navigation'
           >
             Menu
           </button>
-          <ul className="navigation-list js-navigation-list">
+          <ul className='navigation-list js-navigation-list'>
             <li>
-              <Link href="/blog">
+              <Link href='/blog'>
                 <a>Home</a>
               </Link>
             </li>
-
             <li>
-              <Link href="/cv_english">
-                <a>CV</a>
-              </Link>
+              <a href='/en'>CV</a>
             </li>
-
             <li>
-              <Link href="/cv">
-                <a>CV (deutsch)</a>
-              </Link>
+              <a href='/'>CV (deutsch)</a>
             </li>
-
             <li>
-              <Link href="/necessary-shit">
+              <Link href='/necessary-shit'>
                 <a>Privacy & Imprint</a>
               </Link>
             </li>

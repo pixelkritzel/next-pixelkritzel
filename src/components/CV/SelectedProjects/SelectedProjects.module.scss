@@ -1,0 +1,11 @@
+@import 'src/components/CV/styles/_variables.scss';
+
+.project {
+  margin-bottom: $vertical-rhythm * 2;
+}
+
+.description {
+  p {
+    margin: $vertical-rhythm/2 0;
+  }
+}

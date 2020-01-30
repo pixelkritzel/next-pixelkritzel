@@ -1,10 +1,31 @@
 import * as React from 'react';
 import marked from 'marked';
 
-import { HTML } from 'src/components/HTML';
+const omitParagraphs = new marked.Renderer();
 
-export class Markdown extends React.Component<{ children: string }> {
+omitParagraphs.paragraph = function(src) {
+  return src;
+};
+
+interface MarkdownProps extends React.AllHTMLAttributes<HTMLDivElement> {
+  children: string;
+  element?: keyof JSX.IntrinsicElements;
+  inline?: boolean;
+}
+
+export class Markdown extends React.Component<MarkdownProps> {
+  static defaultProps = {
+    element: 'div'
+  };
+
   render() {
-    return <HTML>{marked(this.props.children)}</HTML>;
+    const { children, element, inline, ...otherProps } = this.props;
+
+    return React.createElement(element!, {
+      dangerouslySetInnerHTML: {
+        __html: marked(children, inline ? { renderer: omitParagraphs } : undefined)
+      },
+      ...otherProps
+    });
   }
 }

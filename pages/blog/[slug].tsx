@@ -5,7 +5,7 @@ import { withRouter } from 'next/router';
 import { WithRouterProps } from 'next/dist/client/with-router';
 import { gql } from 'apollo-boost';
 
-import WithError from 'src/components/WithError';
+import { withError } from 'src/components/WithError';
 
 import { client } from 'src/utils/apollo-client';
 import { processBlogPost, ProcessedPost, PostFromAPI } from 'src/utils/process-blog-post';
@@ -42,7 +42,7 @@ class Post extends React.Component<WithRouterProps & ProcessedPost & { statusCod
       <BlogLayout>
         <Head>
           <title>{post.title} - pixelkritzel.de</title>
-          <meta name="description" content={post.summary}></meta>
+          <meta name='description' content={post.summary}></meta>
         </Head>
         <Article {...post} />
       </BlogLayout>
@@ -50,4 +50,4 @@ class Post extends React.Component<WithRouterProps & ProcessedPost & { statusCod
   }
 }
 
-export default withRouter(WithError(Post));
+export default withRouter(withError(Post));

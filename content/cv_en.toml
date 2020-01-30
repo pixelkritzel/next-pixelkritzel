@@ -1,6 +1,6 @@
 title = "Javascript Developer Timo Zöller"
 introduction = "Hi, I'm Timo. For seven years now I have worked as a frontend developer and five years ago I specialized to mainly Javascript single-page applications and styleguide driven frontend architectures. I worked on big customer relationship systems and I like it when my code helps other people in their daily work. I enjoy working environments where people cooperate as equals to maintain an open and responsible working climate. I would love to work with you - if you are interested in a collaboration please send me an [email](mailto:timo@pixelkritzel.de) or drop me a call ([+49 171 150 555 7](tel:49-171-1505557))."
-imagePath = "/static/images/timo.jpg"
+imagePath = "/timo.jpg"
 
 [person]
 title = "Personal details"
@@ -48,10 +48,12 @@ title = "Educational and professional background"
   end = "heute"
   description = "Working as freelance developer"
 
-[selected-projects]
+[selected_projects]
 title = "Selected projects"
+used_technologies_title = "Technologies used"
+language_title = "Project language"
 
-  [[selected-projects.list]]
+  [[selected_projects.list]]
   start = 2019.0
   end = 2019.0
   name = "Publicis Sapient"
@@ -70,7 +72,7 @@ title = "Selected projects"
     "CSS Modules"
   ]
 
-  [[selected-projects.list]]
+  [[selected_projects.list]]
   start = 2018.0
   end = 2018.0
   name = "Tourlane"
@@ -89,7 +91,7 @@ title = "Selected projects"
     "Contentful"
   ]
 
-  [[selected-projects.list]]
+  [[selected_projects.list]]
   start = 2017.0
   end = 2017.0
   name = "Unit-B Technology"
@@ -106,7 +108,7 @@ title = "Selected projects"
     "Node.js"
   ]
 
-  [[selected-projects.list]]
+  [[selected_projects.list]]
   start = 2015.0
   end = 2016.0
   name = "Smava"
@@ -122,7 +124,7 @@ title = "Selected projects"
     "Handlebars"
   ]
 
-  [[selected-projects.list]]
+  [[selected_projects.list]]
   start = 2013.0
   end = 2016.0
   name = "Novacom"
@@ -140,7 +142,7 @@ title = "Selected projects"
     "Ember.js"
   ]
 
-  [[selected-projects.list]]
+  [[selected_projects.list]]
   start = 2013.0
   end = 2013.0
   name = "Toroleo"
@@ -153,8 +155,8 @@ title = "Selected projects"
     "jQuery"
   ]
 
-[customers]
-title = "Customers"
+[clients]
+title = "Clients"
 list = [
   "[Publicis Sapient](https://www.publicissapient.com/)",
   "[Tourlane](https://www.tourlane.de/)",
@@ -236,6 +238,6 @@ list = [
   "[Github](https://github.com/pixelkritzel)",
   "[Twitter](https://twitter.com/pixelkritzel)",
   "[Xing](https://www.xing.com/profile/Timo_Zoeller2)",
-  "[Blog](https://blog.pixelkritzel.de)",
+  "[Blog](/blog)",
   "[Imprint & Privacy (in German)](https://blog.pixelkritzel.de/necessary-shit/)"
 ]

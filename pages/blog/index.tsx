@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 import { withRouter } from 'next/router';
 
-import WithError from 'src/components/WithError';
+import { withError } from 'src/components/WithError';
 
 import { client } from 'src/utils/apollo-client';
 import { processBlogPost, ProcessedPost, PostFromAPI } from 'src/utils/process-blog-post';
@@ -81,4 +81,4 @@ export class Blog extends React.Component<{ allPostsLength: number; page: number
   }
 }
 
-export default withRouter(WithError(Blog));
+export default withRouter(withError(Blog));

@@ -3,7 +3,7 @@ import ErrorPage from 'next/error';
 import { NextPage, NextPageContext } from 'next';
 import { WithRouterProps } from 'next/dist/client/with-router';
 
-export default (Component: NextPage<any>) => {
+export const withError = (Component: NextPage<any>) => {
   return class WithError extends React.Component<WithRouterProps & { statusCode?: number; [key: string]: any }> {
     static async getInitialProps(ctx: NextPageContext) {
       const props = (Component.getInitialProps ? await Component.getInitialProps(ctx) : null) || {};

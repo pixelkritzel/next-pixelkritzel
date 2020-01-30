@@ -1,0 +1,7 @@
+.language-selection {
+  display: block;
+  
+  @include respond-to(print) {
+    display: none;
+  }
+}

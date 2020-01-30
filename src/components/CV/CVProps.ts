@@ -1,4 +1,4 @@
-export interface CVProps {
+export interface CVType {
   title: string;
   introduction: string;
   imagePath: string;
@@ -16,6 +16,8 @@ export interface CVProps {
   };
   selected_projects: {
     title: string;
+    used_technologies_title: string;
+    language_title: string;
     list: {
       start: number;
       end: number;
@@ -26,7 +28,7 @@ export interface CVProps {
       used_technologies: string[];
     }[];
   };
-  customers: {
+  clients: {
     title: string;
     list: string[];
   };

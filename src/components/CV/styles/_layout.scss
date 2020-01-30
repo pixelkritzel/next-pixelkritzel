@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 884px;
+  padding: $vertical-rhythm;
+  margin: 8vh auto 10vh;
+
+  @include respond-to(phone) {
+    margin-top: 0;
+  }
+
+  &>section {
+    margin-bottom: $vertical-rhythm * 2;
+  }
+}
+
+h2 {
+  margin-top: $vertical-rhythm;
+  margin-bottom: $vertical-rhythm;
+}
+
+dl {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  @include respond-to(phone) {
+    display: block;
+  }
+
+  dt,
+  dd {
+    margin: 0;
+    margin-bottom: $vertical-rhythm;
+  }
+
+  $dt-width: 20;
+
+  dt {
+    flex-basis: #{$dt-width + '%'};
+
+    @include respond-to(phone) {
+      font-weight: 900;
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  dd {
+    flex-basis: #{100 - $dt-width + '%'};
+  }
+}

@@ -51,6 +51,8 @@ title = "Werdegang"
 
 [selected_projects]
 title = "Ausgewählte Projekte"
+used_technologies_title = "Verwendete Technologien"
+language_title = "Projektsprache"
 
   [[selected_projects.list]]
   start = 2019.0
@@ -154,7 +156,7 @@ title = "Ausgewählte Projekte"
     "jQuery"
   ]
 
-[customers]
+[clients]
 title = "Kunden (Auswahl)"
 list = [
   "[Publicis Sapient](https://www.publicissapient.com/)",
@@ -236,6 +238,6 @@ list = [
   "[Github](https://github.com/pixelkritzel)",
   "[Twitter](https://twitter.com/pixelkritzel)",
   "[Xing](https://www.xing.com/profile/Timo_Zoeller2)",
-  "[Blog](https://blog.pixelkritzel.de)",
+  "[Blog](/blog)",
   "[Impressum & Datenschutzerklärung](https://blog.pixelkritzel.de/necessary-shit/)"
 ]

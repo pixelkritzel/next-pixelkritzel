@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { CVProps } from 'src/components/CV/CVProps';
+import { CVType } from 'src/components/CV/CVProps';
 import { Markdown } from 'src/components/Markdown';
 
-export class Development extends React.Component<CVProps['development']> {
+export class Development extends React.Component<CVType['development']> {
   render() {
     const { list, title } = this.props;
 
@@ -14,7 +14,7 @@ export class Development extends React.Component<CVProps['development']> {
           {list.map(({ description, end, start }, index) => (
             <React.Fragment key={index}>
               <dt>
-                {start} - {end}
+                {start} &ndash; {end}
               </dt>
               <dd>
                 <Markdown>{description}</Markdown>{' '}

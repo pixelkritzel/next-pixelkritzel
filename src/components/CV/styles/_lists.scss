@@ -1,0 +1,60 @@
+.unstyled-list {
+  margin: 0;
+  padding: 0;
+  li {
+    /* Did I mention Marked annoying behavior of injecting <p>'s ? */
+    &,
+    & > p {
+      display: inline;
+    }
+
+    &:last-child .unstyled-list-comma {
+      display: none;
+    }
+  }
+}
+
+.buzzwords-defintion {
+  @include respond-to(not_phone) {
+    margin-top: $vertical-rhythm / 2;
+  }
+}
+
+.buzzwords {
+  margin: 0;
+  padding: 0;
+  li {
+    @include respond-to(not_phone) {
+      display: inline-block;
+      margin-bottom: $vertical-rhythm / 2;
+      padding: ($vertical-rhythm / 2 - $one-pixel-in-rem) ($vertical-rhythm - $one-pixel-in-rem);
+      color: #181843;
+      background-color: #dcdcf5;
+      border: $one-pixel-in-rem darken(#dcdcf5, 30%) solid;
+    }
+
+    @include respond-to(phone, print) {
+      /* Did I mention Marked annoying behavior of injecting <p>'s ? */
+      & {
+        margin-bottom: 0;
+        padding: 0;
+        background-color: inherit;
+        border: none;
+      }
+
+      &,
+      & > p {
+        display: inline;
+      }
+
+      &:after {
+        display: inline;
+        content: ', ';
+      }
+
+      &:last-child:after {
+        content: '';
+      }
+    }
+  }
+}
